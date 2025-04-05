@@ -18,6 +18,10 @@
 - encodingFilter
 - error-page
 
+## 빌드
+gradle build<br>
+war파일만 생성됨. tomcat에 넣어서 돌려 볼 수 있음
+
 ## 테스트
 gradle test --tests "com.example.StudentControllerTest"
 
