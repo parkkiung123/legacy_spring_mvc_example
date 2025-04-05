@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.repository.TeacherRepository">
+
+    <select id="findAll" resultType="Teacher">
+        SELECT * FROM TEACHER
+    </select>
+
+    <select id="findById" parameterType="int" resultType="Teacher">
+        SELECT * FROM TEACHER WHERE ID = #{id}
+    </select>
+
+    <insert id="insert" parameterType="Teacher">
+        INSERT INTO TEACHER (ID, NAME, CLASS)
+        VALUES (#{id}, #{name}, #{classNum})
+    </insert>
+
+    <update id="update" parameterType="Teacher">
+        UPDATE TEACHER SET 
+        NAME = #{name}, CLASS = #{classNum}
+        WHERE ID = #{id}
+    </update>
+
+    <delete id="delete" parameterType="int">
+        DELETE FROM TEACHER WHERE ID = #{id}
+    </delete>
+
+</mapper>
