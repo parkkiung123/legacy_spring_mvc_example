@@ -63,7 +63,7 @@
             </c:forEach>
         </tbody>
     </table>
-    <form action="${pageContext.request.contextPath}/logout" method="get">
+    <form action="${pageContext.request.contextPath}/logout" method="post">
         <button type="submit">로그아웃</button>
     </form>    
 </body>

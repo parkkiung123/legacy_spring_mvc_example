@@ -62,7 +62,7 @@ public class LoginController {
         }
     }
 
-    @GetMapping("/logout")
+    @RequestMapping(value = "/logout", method = RequestMethod.POST)
     public String logout(HttpSession session) {
         // 세션에 저장된 사용자 정보 제거
         session.invalidate(); // 전체 세션 무효화 (또는 개별 속성 제거 가능)
